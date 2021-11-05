@@ -20,6 +20,21 @@
       $this->hotlvl = $hotlvl;
     }
 
+    public function getCard() : string {
+      $card = '<div class="card">
+        <img src="src/img/ketchup.jpg" alt="">
+        <div class="card-body text-dark">
+          <h5 class="card-title">' . $this->name . '</h5>
+          <p class="card-text">Utoljara feltoltve: ' . $this->refilldate->format('Y-m-d') . '</p>
+          <p class="card-text">Mennyiseg: ' . $this->instorage . '</p>
+          <p class="card-text">Iz: ' . $this->type . '</p>
+          <p class="card-text">Csipos: ' . $this->hotlvl . '</p>
+        </div>
+      </div>';
+
+      return $card;
+    }
+
     public static function getAll() : array {
       global $db;
 
