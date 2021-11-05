@@ -21,7 +21,31 @@
     </div>
     <div class="container">
       <div class="row pt-5">
-
+        <div class="col-sm-8 mx-auto">
+          <form method="post">
+            <div class="mb-3">
+              <label class="form-label">Szósz neve</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mennyiség</label>
+              <input type="number" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mikor volt feltöltve</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Ízvilág</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-5">
+              <label class="form-label">Csipősségi szint</label>
+              <input type="number" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Hozzáadás</button>
+          </form>
+        </div>
       </div>
     </div>
   </body>
