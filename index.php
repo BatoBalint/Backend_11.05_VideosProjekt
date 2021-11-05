@@ -25,21 +25,18 @@
     <div class="container">
       <?php
 
-      $loop = 7;
+      $loop = count($sauceList);
 
       for ($i = 0; $i < $loop; $i++) {
         if ($i % 3 === 0) {
           echo '<div class="row pt-5">';
         }
         echo '<div class="col-sm-4 mx-auto">';
-        echo $sauceList[0]->getCard();
+        echo $sauceList[$i]->getCard();
         echo '</div>';
         if ($i % 3 === 2) {
           echo '</div>';
         }
-        /*if ($i === $loop-1) {
-          echo '</div>';
-        }*/
         if ($i === $loop-1) {
           if ($i % 3 === 2) {
             echo '<div class="row pt-5">';
