@@ -5,7 +5,13 @@
   $id = $_GET['id'] ?? $_POST['id'];
 
   if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    global $db;
 
+    $line = $db->query('SELECT * FROM sauce WHERE id = ' . $id)->fetchAll();
+    $sauce = new Sauce($line[0]['name'], $line[0]['instorage'], new DateTime($line[0]['refilldate']), $line[0]['type'], $line[0]['hotlvl']);
+  } else {
+    Sauce::delete($id);
+    header('Location: index.php');
   }
 
 
@@ -30,8 +36,22 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          
+        <div class="col-sm-4 mx-auto my-5">
+          <?php echo $sauce->getCard(); ?>
+        </div>
+      </div>
+      <div class="row w-75 mx-auto">
+        <div class="col-sm-10">
+          <h4>Biztosan ki szeretné törölni ezt a szószt?</h4>
+        </div>
+        <div class="col-sm-1">
+          <a class="btn btn-info" href="index.php">Mégse</a>
+        </div>
+        <div class="col-sm-1">
+          <form method="post">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input class="btn btn-danger" type="submit" name="delete" value="Törlés">
+          </form>
         </div>
       </div>
     </div>

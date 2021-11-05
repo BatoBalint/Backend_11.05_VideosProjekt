@@ -30,10 +30,10 @@ require_once 'db.php';
         <img src="src/img/ketchup.jpg">
         <div class="card-body text-dark">
           <h5 class="card-title">' . mb_strtoupper($this->name) . '</h5>
-          <p class="card-text">Utoljara feltoltve: ' . $this->refilldate->format('Y-m-d') . '</p>
-          <p class="card-text">Mennyiseg: ' . $this->instorage . '</p>
+          <p class="card-text">Utoljára feltöltve: ' . $this->refilldate->format('Y-m-d') . '</p>
+          <p class="card-text">Mennyiség: ' . $this->instorage . '</p>
           <p class="card-text">Ízvilág: ' . $this->type . '</p>
-          <p class="card-text">Csipos: ' . $this->hotlvl . '</p>
+          <p class="card-text">Csipőssége: ' . $this->hotlvl . '</p>
           <div class="row">
             <div class="col-sm">
               <form method="get" action="edit.php">
@@ -78,7 +78,7 @@ require_once 'db.php';
               ':hotlvl' => $this->hotlvl]);
     }
 
-    public function delete($id) {
+    public static function delete($id) {
       global $db;
 
       $t = $db->prepare('DELETE FROM `sauce` WHERE id = ' . $id)->execute();
