@@ -14,6 +14,8 @@
     <title>Szószvilág</title>
   </head>
   <body class="bg-dark text-light">
+    <div class="container">
 
+    </div>
   </body>
 </html>
