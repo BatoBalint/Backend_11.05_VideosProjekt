@@ -12,7 +12,10 @@ require_once 'db.php';
     public function setId($id) { $this->id = $id; }
 
     public function getName() { return $this->name; }
+    public function getInstorage() { return $this->instorage; }
     public function getDate() { return $this->refilldate->format('Y-m-d'); }
+    public function getType() { return $this->type; }
+    public function getHotlvl() { return $this->hotlvl; }
 
     public function __construct(string $name, int $instorage, DateTime $refilldate, string $type, int $hotlvl) {
       $this->name = $name;
@@ -26,13 +29,26 @@ require_once 'db.php';
       $card = '<div class="card">
         <img src="src/img/ketchup.jpg">
         <div class="card-body text-dark">
-          <h5 class="card-title">' . $this->name . '</h5>
+          <h5 class="card-title">' . mb_strtoupper($this->name) . '</h5>
           <p class="card-text">Utoljara feltoltve: ' . $this->refilldate->format('Y-m-d') . '</p>
           <p class="card-text">Mennyiseg: ' . $this->instorage . '</p>
           <p class="card-text">Ízvilág: ' . $this->type . '</p>
           <p class="card-text">Csipos: ' . $this->hotlvl . '</p>
+          <form method="get" action="edit.php">
+          <div class="row">
+            <div class="col-sm">
+              <input type="hidden" name="id" value="' . $this->id . '">
+              <input class="btn btn-info" type="submit" value="Szerkesztés">
+            </div>
+            <div class="col-sm text-end">
+              <a class="btn btn-danger">Törlés</a>
+            </div>
+          </div>
+          </form>
         </div>
       </div>';
+
+
 
       return $card;
     }
