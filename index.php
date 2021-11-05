@@ -48,7 +48,7 @@
             <div class="card bg-secondary">
               <img src="src/img/newSauce.jpg">
               <div class="card-body text-center">
-                <a class="btn btn-primary my-3" href="">Új szósz felvétele</a>
+                <a class="btn btn-primary my-3" href="newSauce.php">Új szósz felvétele</a>
               </div>
             </div>
           </div>';
