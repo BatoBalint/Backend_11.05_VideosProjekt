@@ -34,17 +34,20 @@ require_once 'db.php';
           <p class="card-text">Mennyiseg: ' . $this->instorage . '</p>
           <p class="card-text">Ízvilág: ' . $this->type . '</p>
           <p class="card-text">Csipos: ' . $this->hotlvl . '</p>
-          <form method="get" action="edit.php">
           <div class="row">
             <div class="col-sm">
+              <form method="get" action="edit.php">
               <input type="hidden" name="id" value="' . $this->id . '">
               <input class="btn btn-info" type="submit" value="Szerkesztés">
+              </form>
             </div>
             <div class="col-sm text-end">
-              <a class="btn btn-danger">Törlés</a>
+              <form method="get" action="delete.php">
+              <input type="hidden" name="id" value="' . $this->id . '">
+              <input class="btn btn-danger" type="submit" value="Törlés">
+              </form>
             </div>
           </div>
-          </form>
         </div>
       </div>';
 
@@ -73,6 +76,12 @@ require_once 'db.php';
               ':refilldate' => $this->getDate(),
               ':type' => $this->type,
               ':hotlvl' => $this->hotlvl]);
+    }
+
+    public function delete($id) {
+      global $db;
+
+      $t = $db->prepare('DELETE FROM `sauce` WHERE id = ' . $id)->execute();
     }
 
     public static function getAll() : array {
