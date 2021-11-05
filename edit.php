@@ -4,7 +4,7 @@
 
   global $db;
 
-  $id = $_GET['id'];
+  $id = $_GET['id'] ?? $_POST['id'];
 
   $line = $db->query('SELECT * FROM `sauce` WHERE `id` = ' . $id)->fetchAll();
 
@@ -22,23 +22,23 @@
   $refilldate = $_POST['refilldate'] ?? $sauce->getDate();
 
   if ($_SERVER['REQUEST_METHOD'] === "POST") {
-    $name = $_POST['name'] ?? $sauce->getName();
     if ($name !== '') {
       $nameError = false;
     }
 
-    $type = $_POST['type'] ?? $sauce->getType();
     if ($type !== '') {
       $typeError = false;
     }
 
-    $hotlvl = $_POST['hotlvl'] ?? $sauce->getHotlvl();
     if ($hotlvl !== '') {
       $hotlvlError = false;
     }
 
-    $instorage = $_POST['instorage'] ?? $sauce->getInstorage();
-    $refilldate = $_POST['refilldate'] ?? $sauce->getDate();
+    if (!$nameError && !$typeError && !$hotlvlError) {
+      $newSauce = new Sauce($name, $instorage, new DateTime($refilldate), $type, $hotlvl);
+      $newSauce->update($id);
+      header('Location: index.php');
+    }
   }
 
 
@@ -67,6 +67,7 @@
       <div class="row pt-5">
         <div class="col-sm-8 mx-auto">
           <form method="post">
+            <input type="hidden" name="" value="<?php echo $id; ?>">
             <div class="mb-3">
               <label class="form-label">Szósz neve <?php if (!$methodGet && $nameError) { echo '<span class="errorMessage">Nem lehet üres a név mező</span>'; } ?></label>
               <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">

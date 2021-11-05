@@ -64,6 +64,17 @@ require_once 'db.php';
               ':hotlvl' => $this->hotlvl]);
     }
 
+    public function update(int $id) {
+      global $db;
+
+      $t = $db->prepare("UPDATE `sauce` SET `name`=:name,`instorage`=:instorage,`refilldate`=:refilldate,`type`=:type,`hotlvl`=:hotlvl WHERE id = " . $id)
+              ->execute([':name' => $this->name,
+              ':instorage' => $this->instorage,
+              ':refilldate' => $this->getDate(),
+              ':type' => $this->type,
+              ':hotlvl' => $this->hotlvl]);
+    }
+
     public static function getAll() : array {
       global $db;
 
