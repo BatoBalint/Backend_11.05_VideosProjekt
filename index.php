@@ -2,6 +2,7 @@
   require_once 'db.php';
   require_once 'sauce.php';
 
+  echo Sauce::getAll()[0];
 
  ?><!DOCTYPE html>
 <html lang="hu" dir="ltr">
@@ -12,7 +13,7 @@
     <meta charset="utf-8">
     <title>Szószvilág</title>
   </head>
-  <body class="bg-dark">
+  <body class="bg-dark text-light">
 
   </body>
 </html>
