@@ -1,32 +1,41 @@
 <?php
+  require_once 'sauce.php';
+
   $methodGet = true;
   $nameError = true;
   $typeError = true;
   $hotlvlError = true;
 
+  $name = '';
+  $type = '';
+  $hotlvl = '';
+  $instorage = '';
+  $refilldate = '';
+
   if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $methodGet = false;
 
-    $name = $_POST['name'] ?? '';
+    $name = $_POST['name'];
     if ($name !== '') {
       $nameError = false;
     }
 
-    $type = $_POST['type'] ?? '';
+    $type = $_POST['type'];
     if ($type !== '') {
       $typeError = false;
     }
 
-    $hotlvl = $_POST['hotlvl'] ?? '';
+    $hotlvl = $_POST['hotlvl'];
     if ($hotlvl !== '') {
       $hotlvlError = false;
     }
 
-    $instorage = $_POST['instorage'] ?? 0;
-    $refilldate = $_POST['refilldate'] ?? new DateTime();
+    $instorage = $_POST['instorage'];
+    $refilldate = $_POST['refilldate'];
 
     if (!$nameError && !$typeError && !$hotlvlError) {
-      $newSauce = new Sauce($name, $instorage, $refilldate, $type, $hotlvl);
+      $newSauce = new Sauce($name, $instorage, new DateTime($refilldate), $type, $hotlvl);
+      $newSauce->save();
     }
   }
 

@@ -1,4 +1,5 @@
 <?php
+require_once 'db.php';
 
   class Sauce {
     private $id = 0;
@@ -11,6 +12,7 @@
     public function setId($id) { $this->id = $id; }
 
     public function getName() { return $this->name; }
+    public function getDate() { return $this->refilldate->format('Y-m-d'); }
 
     public function __construct(string $name, int $instorage, DateTime $refilldate, string $type, int $hotlvl) {
       $this->name = $name;
@@ -33,6 +35,17 @@
       </div>';
 
       return $card;
+    }
+
+    public function save() {
+      global $db;
+
+      $t = $db->prepare("INSERT INTO `sauce`(`name`, `instorage`, `refilldate`, `type`, `hotlvl`) VALUES (:name, :instorage, :refilldate, :type, :hotlvl)")
+              ->execute([':name' => $this->name,
+              ':instorage' => $this->instorage,
+              ':refilldate' => $this->getDate(),
+              ':type' => $this->type,
+              ':hotlvl' => $this->hotlvl]);
     }
 
     public static function getAll() : array {
