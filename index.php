@@ -2,7 +2,7 @@
   require_once 'db.php';
   require_once 'sauce.php';
 
-  echo Sauce::getAll()[0];
+  $sauceList = Sauce::getAll();
 
  ?><!DOCTYPE html>
 <html lang="hu" dir="ltr">
@@ -14,8 +14,18 @@
     <title>Szószvilág</title>
   </head>
   <body class="bg-dark text-light">
+    <nav class="navbar navbar-light bg-secondary">
+      <div class="container-fluid">
+        <span class="h1 text-start mt-1">
+          <img src="src/img/soy-sauce.png" alt="" width="50" height="50" class="align-text-top">
+          Szószvilág
+        </span>
+      </div>
+    </nav>
     <div class="container">
+      <div class="row">
 
+      </div>
     </div>
   </body>
 </html>
