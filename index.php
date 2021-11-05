@@ -23,8 +23,233 @@
       </div>
     </nav>
     <div class="container">
-      <div class="row">
-
+      <div class="row pt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">Mennyiseg: 15</p>
+              <p class="card-text">Iz: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="src/img/ketchup.jpg" alt="">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Ketchup</h5>
+              <p class="card-text">Utoljara feltoltve: anya</p>
+              <p class="card-text">db: 15</p>
+              <p class="card-text">Stilus: savanyu</p>
+              <p class="card-text">Csipos: 0</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
