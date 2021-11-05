@@ -36,6 +36,7 @@
     if (!$nameError && !$typeError && !$hotlvlError) {
       $newSauce = new Sauce($name, $instorage, new DateTime($refilldate), $type, $hotlvl);
       $newSauce->save();
+      header('Location: index.php');
     }
   }
 

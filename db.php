@@ -4,6 +4,6 @@
   $user = "root";
   $pass = "";
 
-  $db = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+  $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $pass);
 
 ?>
