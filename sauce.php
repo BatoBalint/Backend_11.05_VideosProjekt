@@ -25,33 +25,44 @@ require_once 'db.php';
       $this->hotlvl = $hotlvl;
     }
 
-    public function getCard() : string {
-      $card = '<div class="card">
-        <img src="src/img/ketchup.jpg">
-        <div class="card-body text-dark">
-          <h5 class="card-title">' . mb_strtoupper($this->name) . '</h5>
-          <p class="card-text">Utoljára feltöltve: ' . $this->refilldate->format('Y-m-d') . '</p>
-          <p class="card-text">Mennyiség: ' . $this->instorage . '</p>
-          <p class="card-text">Ízvilág: ' . $this->type . '</p>
-          <p class="card-text">Csipőssége: ' . $this->hotlvl . '</p>
-          <div class="row">
-            <div class="col-sm">
-              <form method="get" action="edit.php">
-              <input type="hidden" name="id" value="' . $this->id . '">
-              <input class="btn btn-info" type="submit" value="Szerkesztés">
-              </form>
-            </div>
-            <div class="col-sm text-end">
-              <form method="get" action="delete.php">
-              <input type="hidden" name="id" value="' . $this->id . '">
-              <input class="btn btn-danger" type="submit" value="Törlés">
-              </form>
+    public function getCard(bool $gombokkal) : string {
+      if ($gombokkal) {
+        $card = '<div class="card">
+          <img src="src/img/ketchup.jpg">
+          <div class="card-body text-dark">
+            <h5 class="card-title">' . mb_strtoupper($this->name) . '</h5>
+            <p class="card-text">Utoljára feltöltve: ' . $this->refilldate->format('Y-m-d') . '</p>
+            <p class="card-text">Mennyiség: ' . $this->instorage . '</p>
+            <p class="card-text">Ízvilág: ' . $this->type . '</p>
+            <p class="card-text">Csipőssége: ' . $this->hotlvl . '</p>
+            <div class="row">
+              <div class="col-sm">
+                <form method="get" action="edit.php">
+                <input type="hidden" name="id" value="' . $this->id . '">
+                <input class="btn btn-info" type="submit" value="Szerkesztés">
+                </form>
+              </div>
+              <div class="col-sm text-end">
+                <form method="get" action="delete.php">
+                <input type="hidden" name="id" value="' . $this->id . '">
+                <input class="btn btn-danger" type="submit" value="Törlés">
+                </form>
+              </div>
             </div>
           </div>
-        </div>
-      </div>';
-
-
+        </div>';
+      } else {
+        $card = '<div class="card">
+          <img src="src/img/ketchup.jpg">
+          <div class="card-body text-dark">
+            <h5 class="card-title">' . mb_strtoupper($this->name) . '</h5>
+            <p class="card-text">Utoljára feltöltve: ' . $this->refilldate->format('Y-m-d') . '</p>
+            <p class="card-text">Mennyiség: ' . $this->instorage . '</p>
+            <p class="card-text">Ízvilág: ' . $this->type . '</p>
+            <p class="card-text">Csipőssége: ' . $this->hotlvl . '</p>
+          </div>
+        </div>';
+      }
 
       return $card;
     }

@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4 mx-auto my-5">
-          <?php echo $sauce->getCard(); ?>
+          <?php echo $sauce->getCard(false); ?>
         </div>
       </div>
       <div class="row w-75 mx-auto">

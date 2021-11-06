@@ -71,7 +71,7 @@
               <input type="text" class="form-control" name="name" value="<?php echo $name; ?>">
             </div>
             <div class="mb-3">
-              <label class="form-label">Mennyiség</label>
+              <label class="form-label">Mennyiség a raktárban</label>
               <input type="number" class="form-control" name="instorage" value="<?php echo $instorage; ?>">
             </div>
             <div class="mb-3">
@@ -83,7 +83,7 @@
               <input type="text" class="form-control" name="type" value="<?php echo $type; ?>">
             </div>
             <div class="mb-5">
-              <label class="form-label">Csípősségi szint <?php if (!$methodGet && $hotlvlError) { echo '<span class="errorMessage">Nem lehet üres a csípősségi szint mező</span>'; } ?></label>
+              <label class="form-label">Csípősségi szint (0-5) <?php if (!$methodGet && $hotlvlError) { echo '<span class="errorMessage">Nem lehet üres a csípősségi szint mező</span>'; } ?></label>
               <input type="number" id="hotLvlInput" class="form-control" min="0" max="5" name="hotlvl" value="<?php echo $hotlvl; ?>">
             </div>
             <button type="submit" class="btn btn-primary">Hozzáadás</button>

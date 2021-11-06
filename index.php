@@ -33,7 +33,7 @@
           echo '<div class="row pt-5">';
         }
         echo '<div class="col-sm-4 mx-auto">';
-        echo $sauceList[$i]->getCard();
+        echo $sauceList[$i]->getCard(true);
         echo '</div>';
         if ($i % 3 === 2) {
           echo '</div>';
